@@ -1,0 +1,12 @@
+url: www.animalove.re
+db:
+    url: localhost
+    name: animalove
+    username: test
+    password: test
+key:
+    private: token/private_key
+    public:  token/public_key
+mail:
+    admin:   anthonyporthos@gmail.com
+    contact: contact@animalove.re

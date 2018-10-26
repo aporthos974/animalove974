@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost:8080/" />
+<title>Saisir les informations pour nous contacter</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Saisir les informations pour nous contacter</td></tr>
+</thead><tbody>
+<tr>
+	<td>type</td>
+	<td>//div[@id='contact-uncompressed']//input</td>
+	<td>test@test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='contact-uncompressed']//textarea</td>
+	<td>Je veux vous contacter</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='contact-uncompressed']//button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@id='notification-popin' and contains(@class,'alert-success')]/span[3]</td>
+	<td>Message envoyé</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

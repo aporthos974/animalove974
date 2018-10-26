@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Test Suite</title>
+</head>
+<body>
+<table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
+<tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="Accueil">Accueil</a></td></tr>
+<tr><td><a href="GoToCreationLostForm">Aller sur le formulaire d'animaux perdus</a></td></tr>
+<tr><td><a href="CreateLostAnnouncement">Création d'un signalement d'un animal perdu</a></td></tr>
+<tr><td><a href="GoToAnimalsList">Aller sur la liste des animaux</a></td></tr>
+<tr><td><a href="VerifyLostList">Vérification dans la liste des animaux perdus</a></td></tr>
+<tr><td><a href="GoToLostTabs">Aller sur l'onglet Perdu de la liste des animaux</a></td></tr>
+<tr><td><a href="VerifyOnlyOneAnnouncement">Vérification une seule annonce dans la liste des animaux</a></td></tr>
+<tr><td><a href="VerifyLostList">Vérification du contenu de l'onglet 'Perdu'</a></td></tr>
+<tr><td><a href="VerifyContact">Vérification contact propriétaire</a></td></tr>
+<tr><td><a href="VerifyAnimalRetrieved">Vérification retrouvé animal</a></td></tr>
+<tr><td><a href="GoToCreationLostForm">Aller sur le formulaire d'animaux perdus</a></td></tr>
+<tr><td><a href="CreateLostAnnouncement">Création d'un signalement d'un animal perdu</a></td></tr>
+<tr><td><a href="GoToIndex">Aller à l'accueil</a></td></tr>
+<tr><td><a href="GoToLastLostAnimal">Aller sur la page du dernier animal perdu</a></td></tr>
+<tr><td><a href="VerifyLostList">Vérification du contenu de la page de l'animal perdu</a></td></tr>
+<tr><td><a href="VerifyContact">Vérification contact propriétaire</a></td></tr>
+<tr><td><a href="VerifyAnimalSaw">Vérification de l'animal vu</a></td></tr>
+<tr><td><a href="VerifyAnimalRetrieved">Vérification retrouvé animal</a></td></tr>
+<tr><td><a href="GoToCreationAdoptForm">Aller sur le formulaire d'animaux à adopter</a></td></tr>
+<tr><td><a href="CreateAdoptAnnouncement">Création d'un signalement d'un animal à adopter</a></td></tr>
+<tr><td><a href="GoToAnimalsList">Aller sur la liste des animaux</a></td></tr>
+<tr><td><a href="VerifyAdoptList">Vérification dans la liste des animaux à adopter</a></td></tr>
+<tr><td><a href="GoToAdoptTabs">Aller sur l'onglet À adopter de la liste des animaux</a></td></tr>
+<tr><td><a href="VerifyOnlyOneAnnouncement">Vérification une seule annonce dans la liste des animaux</a></td></tr>
+<tr><td><a href="VerifyAdoptList">Vérification du contenu de l'onglet 'À adopter'</a></td></tr>
+<tr><td><a href="VerifyContact">Vérification contact de l'annonceur</a></td></tr>
+<tr><td><a href="VerifyAnimalAdopted">Vérification de l'animal adopté</a></td></tr>
+<tr><td><a href="GoToContactForm">Ouvrir le formulaire de contact</a></td></tr>
+<tr><td><a href="PopulateContactForm">Saisir les informations pour nous contacter</a></td></tr>
+<tr><td><a href="GoToCreationSeenForm">Aller sur le formulaire d'animaux errants</a></td></tr>
+<tr><td><a href="CreateSeenAnnouncement">Création d'un signalement d'un animal errant</a></td></tr>
+<tr><td><a href="GoToAnimalsList">Aller sur la liste des animaux</a></td></tr>
+<tr><td><a href="VerifySeenList">Vérification dans la liste des animaux errants</a></td></tr>
+<tr><td><a href="GoToSeenTabs">Aller sur l'onglet Vu de la liste des animaux</a></td></tr>
+<tr><td><a href="VerifyOnlyOneAnnouncement">Vérification une seule annonce dans la liste des animaux</a></td></tr>
+<tr><td><a href="VerifySeenList">Vérification du contenu de l'onglet 'Vu'</a></td></tr>
+<tr><td><a href="VerifyContact">Vérification contact de l'annonceur</a></td></tr>
+<tr><td><a href="VerifyAnimalSaw">Vérification de l'animal vu</a></td></tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost:8080/" />
+<title>Vérification retrouvé animal</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Vérification retrouvé animal</td></tr>
+</thead><tbody>
+<tr>
+	<td>click</td>
+	<td>//div[contains(@class,'search-result')]/div[2]//div[contains(@class,'action-panel')]/button[contains(text(),'Il a un nouveau propriétaire')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@id='email']</td>
+	<td>test@test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@id='password']</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[text()='Valider']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@id='notification-popin' and contains(@class,'alert-info')]/span[3]</td>
+	<td>Prise en compte de la demande de modification...</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@id='notification-popin' and contains(@class,'alert-success')]/span[3]</td>
+	<td>Modification effectuée avec succès</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[contains(@class,'search-result')]/div[2]//h4</td>
+	<td>AnimaloveNom</td>
+</tr>
+</tbody></table>
+</body>
+</html>

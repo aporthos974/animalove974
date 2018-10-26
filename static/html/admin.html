@@ -1,0 +1,39 @@
+[[define "content"]]
+<div class="row" data-ng-controller="AdminCtrl">
+	<h1>Administration</h1>
+	<div data-ng-hide="addAnnouncementsTemplate" class="col-lg-6 col-lg-offset-2">
+		<form name="loginForm" novalidate="" class="form-horizontal" data-ng-submit="authenticate()">			
+			<div class="form-horizontal panel panel-default">
+				<div class="panel-body">
+					  <div class="form-group" data-ng-class="{'has-error': (loginForm.email.$error.required || loginForm.email.$invalid) &amp;&amp; submitted}">
+					    <label for="email" class="col-sm-4 control-label glyphicon glyphicon-user"></label>
+					    <div class="col-sm-6">
+					      <input type="email" class="form-control" id="email" name="email" placeholder="exemple@email.com" data-ng-model="account.Email" data-ng-trim="true" required>
+					    </div>
+					  </div>
+					  <div class="form-group" data-ng-class="{'has-error': (loginForm.password.$error.required || loginForm.password.$invalid) &amp;&amp; submitted}">
+					    <label for="password" class="col-sm-4 control-label glyphicon glyphicon-lock"></label>
+					    <div class="col-sm-6">
+					      <input type="password" class="form-control" id="password" name="password" placeholder="Mot de passe" data-ng-model="account.Password" required>
+					    </div>
+					  </div>
+					<div class="row error-container" data-ng-show="loginForm.$invalid &amp;&amp; submitted">
+						<div class="col-md-8 col-md-offset-3">
+							<div class="alert alert-danger" role="alert">
+								<span class="error-message" data-ng-show="loginForm.$error.required">Il y a des champs obligatoires à compléter.</span>
+								<span class="error-message" data-ng-show="loginForm.$invalid">Il y a des champs erronés.</span>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+		   				<div class="col-sm-offset-4 col-sm-10">
+		        			<button type="submit" class="btn btn-success">Valider</button>
+						</div>
+					</div>
+				</div>
+			</div>
+        </form>
+	</div>
+	<restricted-content content="addAnnouncementsTemplate"></postform>
+</div>
+[[end]]

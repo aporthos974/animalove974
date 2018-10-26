@@ -1,0 +1,45 @@
+[[define "content"]]
+<script type="application/ld+json">
+{
+   "@context": "http://schema.org",
+   "@type": "WebSite",
+   "url": "http://www.animalove.re/",
+   "potentialAction": {
+     "@type": "SearchAction",
+     "target": "http://www.animalove.re/animaux?criteria={critere}",
+     "query-input": "required name=critere"
+   }
+}
+</script>
+<div class="container-fluid" data-ng-controller="IndexCtrl">
+	<div class="row-fluid">
+		<div class="row">
+			<div class="col-xs-12 col-xs-offset-0 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-lg-5">
+				<div class="search-box-container">
+					<div class="search-box">
+						[[template "search" .]]
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="hidden-link">
+			[[ range .Announcements ]]
+			<a href="[[ .GetLink ]]">[[ .Name ]] [[ .Description ]]</a>
+			[[ end ]]
+		</div>
+		<div class="col-xs-12 col-md-3">
+			<div class="row" data-ng-show="announcements &amp;&amp; !!announcements.length &amp;&amp; (announcements[0].Name || announcements[0].Description || announcements[0].Picture)">
+				<div class="col-md-8">
+					<h4 class="last-lost">Dernier animal perdu</h4>
+					<div class="last-lost thumbnail">
+						<a data-ng-href="/animaux/id/{{announcements[0].Id}}">
+	                       <img data-ng-src="{{utils.getPicture(announcements[0].Picture)}}" alt="Dernier animal perdu" src="/static/images/noimage.gif" />
+						    <h5 data-ng-show="announcements[0].Name">{{announcements[0].Name}}</h5>
+						</a>
+	                </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+[[end]]

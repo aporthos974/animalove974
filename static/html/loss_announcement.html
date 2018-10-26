@@ -1,0 +1,22 @@
+[[define "content"]]
+<div class="container">
+	<div data-ng-controller="LostListCtrl">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<ul class="tabs nav nav-pills nav-justified">
+					<li role="presentation" data-ng-class="{active: type == '' || !type}"><a data-ng-click="getAnnouncementsFromType()">Tout</a></li>
+					<li role="presentation" data-ng-class="{active: type == 'perdu'}"><a data-ng-click="getAnnouncementsFromType('perdu')">Perdu</a></li>
+					<li role="presentation" data-ng-class="{active: type == 'errant'}"><a data-ng-click="getAnnouncementsFromType('errant')">Vu</a></li>
+					<li role="presentation" data-ng-class="{active: type == 'adopter'}"><a data-ng-click="getAnnouncementsFromType('adopter')">À adopter</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<h3 class="search-title">Liste des animaux</h3>
+			</div>
+		</div>
+		[[template "result" .]]
+	</div>
+</div>
+[[end]]

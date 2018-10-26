@@ -1,0 +1,171 @@
+[[define "base"]]
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+	<head>		
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="/static/css/select.min.css" />
+		<link rel="stylesheet" href="/static/css/styles-min.css" />
+		<link rel="stylesheet" href="/static/css/loader.css" />
+		
+	    <script src="/static/js/jquery.min.js" type="text/javascript"></script>
+	    <script src="/static/js/angular.min.js" type="text/javascript"></script>
+	    <script src="/static/js/angular-sanitize.min.js" type="text/javascript"></script>
+	    <script src="/static/js/select.min.js" type="text/javascript"></script>
+	    <script src="/static/js/bootstrap.min.js" type="text/javascript"></script>
+	    <script src="/static/js/bootstrap-notify.min.js" type="text/javascript"></script>
+	    <script src="/static/js/ui-bootstrap-tpls-0.12.1.min.js" type="text/javascript"></script>
+	    <script src="/static/js/raphael-min.js" type="text/javascript"></script>
+	    <script src="/static/js/maps.js" type="text/javascript"></script>
+	    <script src="/static/js/moment.min.js" type="text/javascript"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCL8LNJBSKfIpvku9X9ZkHX-KTjKcknfIY" type="text/javascript"></script>
+	    <script src="/static/js/javascript-min.js" type="text/javascript"></script>
+		
+		<script type="text/javascript">
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+		  ga('create', 'UA-60677351-1', 'auto');
+		  ga('send', 'pageview');
+		
+		</script>
+		
+
+    	<title>[[.Title]]</title>
+		<meta name="keywords" content="animal,chien,chat,perdu,trouvé,reunion,chien perdu,chat perdu,animal perdu,animal saint denis,animal saint andré,animal saint pail,animal saint les avirons,animal saint marie,animal la possession,animal sainte suzanne,animal le port,animal saint leu,animal saint louis,animal saint pierre,animal le tampon,animal entre deux,animal cilaos,animal salazie,animal la plaine des palmistes,animal sainte rose,animal bras panon,animal saint benoit,animal saint joseph,animal saint philippe,animal trois bassins,animal petite ile,animal etang sale,animal perdu,chien,chat,perdu,trouvé,reunion,chien perdu,chat perdu,animal perdu,animal perdu saint denis,animal perdu saint andré,animal perdu saint pail,animal perdu saint les avirons,animal perdu saint marie,animal perdu la possession,animal perdu sainte suzanne,animal perdu le port,animal perdu saint leu,animal perdu saint louis,animal perdu saint pierre,animal perdu le tampon,animal perdu entre deux,animal perdu cilaos,animal perdu salazie,animal perdu la plaine des palmistes,animal perdu sainte rose,animal perdu bras panon,animal perdu saint benoit,animal perdu saint joseph,animal perdu saint philippe,animal perdu trois bassins,animal perdu petite ile,animal perdu etang sale,chien saint denis,chien saint andré,chien saint pail,chien saint les avirons,chien saint marie,chien la possession,chien sainte suzanne,chien le port,chien saint leu,chien saint louis,chien saint pierre,chien le tampon,chien entre deux,chien cilaos,chien salazie,chien la plaine des palmistes,chien sainte rose,chien bras panon,chien saint benoit,chien saint joseph,chien saint philippe,chien trois bassins,chien petite ile,chien etang sale,chien perdu saint denis,chien perdu saint andré,chien perdu saint pail,chien perdu saint les avirons,chien perdu saint marie,chien perdu la possession,chien perdu sainte suzanne,chien perdu le port,chien perdu saint leu,chien perdu saint louis,chien perdu saint pierre,chien perdu le tampon,chien perdu entre deux,chien perdu cilaos,chien perdu salazie,chien perdu la plaine des palmistes,chien perdu sainte rose,chien perdu bras panon,chien perdu saint benoit,chien perdu saint joseph,chien perdu saint philippe,chien perdu trois bassins,chien perdu petite ile,chien perdu etang sale,chat perdu saint denis,chat perdu saint andré,chat perdu saint pail,chat perdu saint les avirons,chat perdu saint marie,chat perdu la possession,chat perdu sainte suzanne,chat perdu le port,chat perdu saint leu,chat perdu saint louis,chat perdu saint pierre,chat perdu le tampon,chat perdu entre deux,chat perdu cilaos,chat perdu salazie,chat perdu la plaine des palmistes,chat perdu sainte rose,chat perdu bras panon,chat perdu saint benoit,chat perdu saint joseph,chat perdu saint philippe,chat perdu trois bassins,chat perdu petite ile,chat perdu etang sale,chat trouvé saint denis,chat trouvé saint andré,chat trouvé saint pail,chat trouvé saint les avirons,chat trouvé saint marie,chat trouvé la possession,chat trouvé sainte suzanne,chat trouvé le port,chat trouvé saint leu,chat trouvé saint louis,chat trouvé saint pierre,chat trouvé le tampon,chat trouvé entre deux,chat trouvé cilaos,chat trouvé salazie,chat trouvé la plaine des palmistes,chat trouvé sainte rose,chat trouvé bras panon,chat trouvé saint benoit,chat trouvé saint joseph,chat trouvé saint philippe,chat trouvé trois bassins,chat trouvé petite ile,chat trouvé etang sale,animal trouvé saint denis,animal trouvé saint andré,animal trouvé saint pail,animal trouvé saint les avirons,animal trouvé saint marie,animal trouvé la possession,animal trouvé sainte suzanne,animal trouvé le port,animal trouvé saint leu,animal trouvé saint louis,animal trouvé saint pierre,animal trouvé le tampon,animal trouvé entre deux,animal trouvé cilaos,animal trouvé salazie,animal trouvé la plaine des palmistes,animal trouvé sainte rose,animal trouvé bras panon,animal trouvé saint benoit,animal trouvé saint joseph,animal trouvé saint philippe,animal trouvé trois bassins,animal trouvé petite ile,animal trouvé etang sale,chien adopte saint denis,chien adopte saint andré,chien adopte saint pail,chien adopte saint les avirons,chien adopte saint marie,chien adopte la possession,chien adopte sainte suzanne,chien adopte le port,chien adopte saint leu,chien adopte saint louis,chien adopte saint pierre,chien adopte le tampon,chien adopte entre deux,chien adopte cilaos,chien adopte salazie,chien adopte la plaine des palmistes,chien adopte sainte rose,chien adopte bras panon,chien adopte saint benoit,chien adopte saint joseph,chien adopte saint philippe,chien adopte trois bassins,chien adopte petite ile,chien adopte etang sale,chat adopte saint denis,chat adopte saint andré,chat adopte saint pail,chat adopte saint les avirons,chat adopte saint marie,chat adopte la possession,chat adopte sainte suzanne,chat adopte le port,chat adopte saint leu,chat adopte saint louis,chat adopte saint pierre,chat adopte le tampon,chat adopte entre deux,chat adopte cilaos,chat adopte salazie,chat adopte la plaine des palmistes,chat adopte sainte rose,chat adopte bras panon,chat adopte saint benoit,chat adopte saint joseph,chat adopte saint philippe,chat adopte trois bassins,chat adopte petite ile,chat adopte etang sale,animal adopte saint denis,animal adopte saint andré,animal adopte saint pail,animal adopte saint les avirons,animal adopte saint marie,animal adopte la possession,animal adopte sainte suzanne,animal adopte le port,animal adopte saint leu,animal adopte saint louis,animal adopte saint pierre,animal adopte le tampon,animal adopte entre deux,animal adopte cilaos,animal adopte salazie,animal adopte la plaine des palmistes,animal adopte sainte rose,animal adopte bras panon,animal adopte saint benoit,animal adopte saint joseph,animal adopte saint philippe,animal adopte trois bassins,animal adopte petite ile,animal adopte etang sale,chien trouvé saint denis,chien trouvé saint andré,chien trouvé saint pail,chien trouvé saint les avirons,chien trouvé saint marie,chien trouvé la possession,chien trouvé sainte suzanne,chien trouvé le port,chien trouvé saint leu,chien trouvé saint louis,chien trouvé saint pierre,chien trouvé le tampon,chien trouvé entre deux,chien trouvé cilaos,chien trouvé salazie,chien trouvé la plaine des palmistes,chien trouvé sainte rose,chien trouvé bras panon,chien trouvé saint benoit,chien trouvé saint joseph,chien trouvé saint philippe,chien trouvé trois bassins,chien trouvé petite ile,chien trouvé etang sale" />
+		<meta name="description" content="[[.Description]]" />
+	    <meta name="charset" content="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="shortcut icon" type="image/png" href="/static/images/favicon.png" />
+		<meta property="og:title" content="[[.Title]]"/>
+		<meta property="og:image" content="[[.Image]]"/>
+		<meta property="og:url" content="[[.Link]]"/>
+		<meta property="og:locale" content="fr_FR"/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:site_name" content="AnimaLove"/>
+		<meta property="og:description" content="[[.Description]]"/>
+	</head>
+	
+	<body data-ng-app="reunion" data-ng-controller="ReunionCtrl" data-ng-cloak="">
+		<script>
+		  window.fbAsyncInit = function() {
+		    FB.init({
+		      appId      : '1608592022695722',
+		      xfbml      : true,
+		      version    : 'v2.2'
+		    });
+		  };
+		
+		  (function(d, s, id){
+		     var js, fjs = d.getElementsByTagName(s)[0];
+		     if (d.getElementById(id)) {return;}
+		     js = d.createElement(s); js.id = id;
+		     js.src = "//connect.facebook.net/en_US/sdk.js";
+		     fjs.parentNode.insertBefore(js, fjs);
+		   }(document, 'script', 'facebook-jssdk'));
+		</script>
+		<nav class="navbar navbar-default bar">
+				<div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			    </div>
+			    <div id="navbar-collapse" class="collapse navbar-collapse">
+					<div class="row-fluid">
+						<div class="col-xs-12 col-xs-offset-0 col-sm-4 col-sm-offset-5">
+						    <ul class="nav navbar-nav">
+						        <li data-ng-class="{ 'active': isTab('accueil') }"><a href="/">Accueil</a></li>
+						        <li data-ng-class="{ 'active': isTab('announcements') }"><a href="/animaux">Les animaux</a></li>
+						        <li class="visible-xs"><a href="/animaux/perdu/nouveau">Signaler la perte d'un animal</a></li>
+						        <li class="visible-xs"><a href="/animaux/errant/nouveau">Signaler un animal errant</a></li>
+						        <li class="visible-xs"><a href="/animaux/adopter/nouveau">Signaler un animal à adopter</a></li>
+						    </ul>
+						</div>
+					</div>
+					<div class="nav navbar-nav navbar-right">
+						<div class="btn-group btn-alert">
+						  <ul class="dropdown-menu dropdown-menu-danger" role="menu">
+						     </ul>
+						</div>
+				    </div>
+			    </div>
+			</nav>
+		<div class="header">
+			<div class="container-fluid bloc-header">
+				<div class="row-fluid">
+					<div class="col-xs-5 col-md-2">
+						<img src="/static/images/logo.png" alt="Logo" class="img-responsive" />
+					</div>
+					<div class="hidden-xs col-sm-6 col-sm-push-4">
+						<h1 class="title-header">AnimaL^ve</h1>
+						<h2>Animaux perdus, errants et à adopter à la Réunion</h2>
+						<h4>Publier pour augmenter les chances d'aider ces animaux.</h4>
+					</div>
+					<div class="visible-xs col-xs-12 title-container-xs">
+						<h1 class="title-header">AnimaL^ve</h1>
+						<h2>Animaux perdus, errants et à adopter à la Réunion</h2>
+						<h4>Publier pour augmenter les chances d'aider ces animaux.</h4>
+					</div>
+				</div>
+				<div class="btn-group bloc-action hidden-xs">
+				  	<a class="btn btn-lg dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+				    	Faire un signalement <span class="caret"></span>
+				  	</a>
+					<ul class="dropdown-menu dropdown-menu-danger" role="menu">
+						<li class="dropdown-danger"><a href="/animaux/perdu/nouveau">La perte d'un animal</a></li>
+					    <li class="dropdown-danger"><a href="/animaux/errant/nouveau">Un animal errant</a></li>
+					    <li class="dropdown-danger"><a href="/animaux/adopter/nouveau">Un animal à adopter</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--a class="hidden-xs network-tab" href="http://www.facebook.com/animalove974" target="_blank"><img src="/static/images/facebook.png" alt="Facebook" /></a>
+		<a class="hidden-xs network-tab" href="https://twitter.com/animalove974" target="_blank"><img src="/static/images/twitter.png" alt="Twitter" /></a-->
+		<div id="main-notification" class="container-fluid">
+			<div class="notification notification-hidden col-xs-11 col-sm-3">
+				<button type="button" aria-hidden="true" class="close" data-ng-click="hideNotification()">×</button>
+				<div class="media">
+					<div class="media-left">
+						<img class="media-object" data-ng-src="{{utils.getPicture(createdSeenAnnouncement.Picture)}}" alt="Animal aperçu" src="/static/images/noimage.gif" />
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading" data-ng-bind="createdSeenAnnouncement.City">&nbsp;</h4>
+						<p data-ng-bind="createdSeenAnnouncement.Description"></p>
+					</div>
+				</div>
+			</div>
+			[[template "content" .]]
+		</div>
+		<h1 class="hidden-link">Animaux perdus à la Réunion</h1>
+		<h2 class="hidden-link">Chien perdu</h2>
+		<h2 class="hidden-link">Chien errant</h2>
+		<h2 class="hidden-link">Chien à adopter</h2>
+		<h2 class="hidden-link">Chat perdu</h2>
+		<h2 class="hidden-link">Chat errant</h2>
+		<h2 class="hidden-link">Chat à adopter</h2>
+		<div id="contact-compressed" class="contact-container contact-title" data-ng-click="showContact()">
+			<span>Nous contacter</span>
+			<img src="/static/images/arrow_up.png" alt="Ouvrir"/>
+		</div>
+		<div id="contact-uncompressed" class="contact-container hide">
+			<div class="contact-title" data-ng-click="hideContact()">
+				<span>Nous contacter</span>
+				<img src="/static/images/arrow_down.png" alt="Fermer"/>
+			</div>
+			<div class="contact-body">
+				<form id="contactForm" name="contactForm" data-ng-submit="sendMessage()">
+					<span>Contactez nous si vous avez une question, une suggestion ou si vous rencontrez un problème.</span>
+					<input type="email" class="form-control contact-control" id="contactEmail" name="contactEmail" data-ng-model="contactSender" placeholder="Adresse email" data-ng-trim="true" required>
+					<textarea class="form-control contact-control" rows="3" id="contactMessage" name="contactMessage" data-ng-model="contactMessage" placeholder="Message" data-ng-trim="true" required></textarea>
+					<button type="submit" class="btn btn-default contact-control">Envoyer</button>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
+[[end]]

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost:8080/" />
+<title>Vérification dans la liste des animaux perdus</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Vérification dans la liste des animaux perdus</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeEval</td>
+	<td>var currentDate = new Date();currentDate.getHours() + ':';</td>
+	<td>currentTime</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//div[contains(@class,'search-result')]/div[2]//img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[contains(@class,'search-result')]/div[2]//em</td>
+	<td>Aujourd'hui à ${currentTime}*</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[contains(@class,'search-result')]/div[2]//h4</td>
+	<td>AnimaloveNom</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//div[contains(@class,'search-result')]/div[2]//h5[contains(text(), 'Il a été perdu il y a')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[contains(@class,'search-result')]/div[2]//div[@data-ng-show='announcement.City']/div[2]</td>
+	<td>Sainte Marie</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[contains(@class,'search-result')]/div[2]//div[@data-ng-show='announcement.PhoneNumber']/div[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[contains(@class,'search-result')]/div[2]//div[@data-ng-show='announcement.PhoneNumber']/div[2]/span[@data-ng-show='announcement.displayedPhoneNumber']</td>
+	<td>0556271239</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[contains(@class,'search-result')]/div[2]//div[@data-ng-show='announcement.Animal']/div[2]</td>
+	<td>Chien</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[contains(@class,'search-result')]/div[2]//div[@data-ng-show='announcement.Specy']/div[2]</td>
+	<td>Shiba Inu</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[contains(@class,'search-result')]/div[2]//div[@data-ng-show='announcement.Sex']/div[2]</td>
+	<td>Mâle</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[contains(@class,'search-result')]/div[2]//div[@data-ng-show='announcement.Color']/div[2]</td>
+	<td>Beige et noir</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[contains(@class,'search-result')]/div[2]//div[@data-ng-show='announcement.Description']/div[2]</td>
+	<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullam</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[contains(@class,'search-result')]/div[2]//div[contains(@class,'last-location')]//em</td>
+	<td>Dernière localisation effectuée Aujourd'hui à ${currentTime}*</td>
+</tr>
+</tbody></table>
+</body>
+</html>

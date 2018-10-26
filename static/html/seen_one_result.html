@@ -1,0 +1,44 @@
+<div class="one-result-container">
+	<div class="jumbotron one-result media">
+		  <div class="col-xs-12 col-md-4 media-left media-middle">
+			  <div class="thumbnail">
+			      <img class="media-object img-responsive" data-ng-src="{{utils.getPicture(announcement.Picture)}}" alt="Animal aperçu" src="/static/images/noimage.gif" />
+		  	  </div>
+		  </div>
+		  <div class="media-body">
+			<div class="row creation-date">
+				<div class="col-xs-12">
+					<span><em>{{dateService.computeDuration(announcement.CreationDate)}}</em></span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-md-7">
+				    <h4 class="media-heading" data-ng-show="announcement.Name">{{announcement.Name}}</h4>
+					<h5>Il a été vu {{dateService.getFormattedDate(announcement.LostDate)}}</h5>
+				  	<div class="row" data-ng-show="announcement.City"><div class="col-xs-4 col-md-3"><strong>Ville</strong></div><div class="col-xs-8 col-md-9">{{announcement.City}}</div></div>
+				  	<div class="row" data-ng-show="announcement.PhoneNumber"><div class="col-xs-4 col-md-3"><strong>Téléphone</strong></div><div class="col-xs-8 col-md-9"><span data-ng-hide="announcement.displayedPhoneNumber" class="protect-number" data-ng-click="utils.displayPhoneNumber(announcement)"><em><u>Cliquer pour afficher</u></em></span><span data-ng-show="announcement.displayedPhoneNumber">{{announcement.displayedPhoneNumber}}</span></div></div>
+				  	<div class="row" data-ng-show="announcement.Animal"><div class="col-xs-4 col-md-3"><strong>Animal</strong></div><div class="col-xs-8 col-md-9">{{announcement.Animal}}</div></div>
+				  	<div class="row" data-ng-show="announcement.Specy"><div class="col-xs-4 col-md-3"><strong>Race</strong></div><div class="col-xs-8 col-md-9">{{announcement.Specy.Name}}</div></div>
+				  	<div class="row" data-ng-show="announcement.Sex"><div class="col-xs-4 col-md-3"><strong>Sexe</strong></div><div class="col-xs-8 col-md-9">{{announcement.Sex}}</div></div>
+				  	<div class="row" data-ng-show="announcement.Color"><div class="col-xs-4 col-md-3"><strong>Couleur</strong></div><div class="col-xs-8 col-md-9">{{announcement.Color}}</div></div>
+				  	<div class="row" data-ng-show="announcement.Description"><div class="col-xs-4 col-md-3"><strong>Description</strong></div><div class="col-xs-8 col-md-9">{{announcement.Description}}</div></div>
+					<div class="row last-location" data-ng-show="announcement.Locations &amp;&amp; !!announcement.Locations.length"><div class="col-xs-12"><div><em>Dernière localisation effectuée {{dateService.fetchLastLocationDate(announcement.Locations)}}</em></div></div></div>
+		  		</div>
+				<div class="col-md-5 hidden-xs">
+					<div class="btn-group-vertical action-panel" role="group">
+						<button type="button" class="btn" data-toggle="modal" data-target="#location" data-ng-click="selectAnnouncement(announcement)">Je l'ai vu</button>
+						<button type="button" class="btn" data-toggle="modal" data-target="#authentication" data-ng-click="prepareUpdate('deleted', announcement)">Supprimer</button>
+						<button type="button" class="btn" data-toggle="modal" data-target="#contact" data-ng-click="selectAnnouncement(announcement)">Contacter l'annonceur</button>
+					</div>
+			  	</div>
+				<div class="col-xs-12 visible-xs">
+					<div class="btn-group btn-group-xs action-panel" role="group">
+						<button type="button" class="btn" data-toggle="modal" data-target="#location" data-ng-click="selectAnnouncement(announcement)">Vu</button>
+						<button type="button" class="btn" data-toggle="modal" data-target="#authentication" data-ng-click="prepareUpdate('deleted', announcement)">Supprimer</button>
+						<button type="button" class="btn" data-toggle="modal" data-target="#contact" data-ng-click="selectAnnouncement(announcement)">Contacter</button>
+					</div>
+			  	</div>
+		  	</div>
+		  </div>
+	</div>
+</div>

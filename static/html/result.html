@@ -1,0 +1,29 @@
+[[define "result"]]
+<div data-ng-show="displayProgressbar" class="row">
+	<div class=" col-xs-4 col-xs-offset-4">
+		<div class="loader">
+			Chargement...
+		</div>
+	</div>
+</div>
+<div data-ng-hide="displayProgressbar" class="row search-result">
+		<div class="col-md-10 col-md-offset-1">
+			</div>
+			<h4 data-ng-show="!criteria &amp;&amp; !announcements.length">Aucune annonce publiée.</h4>
+			<h4 data-ng-show="criteria &amp;&amp; !announcements.length">Aucune annonce trouvée pour '{{criteria}}'.</h4>
+			<div data-ng-cloak="" data-ng-repeat="announcement in announcements" data-ng-include="getOneResultTemplate(announcement)">
+			</div>
+			
+			<div data-ng-show="announcements &amp;&amp; totalItems > numberByPage" class="row">
+			    <div class="col-md-9 col-xs-offset-2 col-md-offset-4">
+					<pagination data-total-items="totalItems" data-items-per-page="numberByPage" data-previous-text="&lsaquo;" data-next-text="&rsaquo;" data-first-text="&laquo;" data-last-text="&raquo;" 
+						data-ng-model="currentPage" data-ng-change="pageChanged()" data-max-size="maxSize" class="pagination-sm" data-boundary-links="true" data-rotate="false" data-num-pages="numPages"></pagination>
+				</div>
+			</div>			
+			
+		</div>
+[[template "auth" .]]
+[[template "contact" .]]
+[[template "location" .]]
+</div>
+[[end]]

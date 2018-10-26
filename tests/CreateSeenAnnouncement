@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost:8080/" />
+<title>Création d'un signalement d'un animal perdu</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Création d'un signalement d'un animal perdu</td></tr>
+</thead><tbody>
+<tr>
+	<td>click</td>
+	<td>//button[contains(@class, 'calendar-popup-btn')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[contains(text(), &quot;Aujourd'hui&quot;)]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//select[@id='animal']</td>
+	<td>Chien</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='race']//i[contains(@class, 'caret')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='race']//a[contains(., 'Shiba Inu')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//select[@id='sex']</td>
+	<td>Mâle</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@id='color']</td>
+	<td>Beige et noir</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@id='picture']</td>
+	<td>/home/aporthos/Documents/perso/go_projects/src/reunion/tests/goliath.jpg</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='city']//i[contains(@class, 'caret')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='city']//a[contains(., 'Sainte Marie')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@id='phone']</td>
+	<td>0556271239</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='google-maps']/div[1]/div[1]/div[2]</td>
+	<td>10,20</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//textarea[@id='description']</td>
+	<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullam</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@id='email']</td>
+	<td>test@test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@id='password']</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@id='password2']</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[text()=&quot;Déposer l'annonce&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@id='notification-popin' and contains(@class,'alert-info')]/span[3]</td>
+	<td>Prise en compte de la demande de signalement d'un animal...</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@id='notification-popin' and contains(@class,'alert-success')]/span[3]</td>
+	<td>Enregistrement du signalement de l'animal effectué avec succès</td>
+</tr>
+</tbody></table>
+</body>
+</html>

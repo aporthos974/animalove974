@@ -1,0 +1,29 @@
+[[define "search"]]
+<script type="text/ng-template" id="customTemplate.html">
+<div class="suggestion-result">
+	<div class="suggestion-category-container">&nbsp;
+		<span class="suggestion-category" data-ng-if="match.model.index == 1 && match.model.category == 'city'">Ville</span>
+		<span class="suggestion-category" data-ng-if="match.model.index == 1 && match.model.category == 'announcement'">Animal</span>
+	</div>
+	<a class="suggestion-link-container">
+		<div class="suggestion-thumb-container"><img class="suggestion-thumb" data-ng-src="{{$parent.$parent.$parent.getThumbnail(match.model)}}" src="/static/images/noimage.gif" />&nbsp;</div>
+		<div class="suggestion-label-container"><span data-bind-html-unsafe="match.model.label | typeaheadHighlight:query"></span></div>
+	</a>
+</div>
+</script>
+<div id="main" class="container">
+	<div class="row">
+		<div class="col-xs-12 col-xs-offset-0 col-sm-7 col-sm-offset-0 col-md-7 col-md-offset-0 col-lg-7 col-lg-offset-0">
+			<form name="search" class="search-form" data-ng-submit="searchCriteria()">
+				<div class="col-xs-12 col-sm-9">
+					<div class="form-group">
+						<input type="text" data-ng-model="criteria" placeholder="Recherche..." data-typeahead="result.label as result.label for result in searchSuggestion($viewValue) | filter:{label:$viewValue}" 
+							data-typeahead-template-url="customTemplate.html" data-typeahead-wait-ms="400" class="form-control" />
+						<span class="glyphicon glyphicon-search form-control-feedback" aria-hidden="true"></span>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+[[end]]
